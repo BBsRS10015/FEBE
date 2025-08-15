@@ -3,10 +3,20 @@
         
         <h1>Belajar Picture</h1>
 
+        <!-- <picture>
+            <source media="kondisi" srcset="lokasi_gambar">
+            <source media="kondisi" srcset="lokasi_gambar_lain">
+            <img src="lokasi_gambar_default" alt="deskripsi">
+        </picture> -->
+        
         <picture>
             <source media="(max-width: 500px)" srcset="pzn-black.png">
+            <!-- Jika lebar layar ≤ 500px, maka tampilkan gambar pzn-black.png -->
             <source media="(max-width: 1000px)" srcset="pzn-green.png">
+            <!-- ka lebar layar ≤ 1000px, tampilkan pzn-green.png -->
             <img src="pzn.png" alt="Programmer Zaman Now" style="width: 250px; height: 250px;">
+            <!-- Ini adalah fallback/default jika layar lebih dari 1000px atau jika browser tidak mendukung <picture></picture> -->
         </picture>
+
     </body>
 </html>

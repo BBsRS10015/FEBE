@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Login</title>
+    <link rel="stylesheet" href="LoginFormStyle.css">
+</head>
+<body>
+    <main class="login-container">
+            <header class="login-header">
+                <h1>Sign in to Cite</h1>
+            </header>        
+        <form action="#" method="POST">
+            <!-- Username / Email -->
+            <div class="input-container">
+                <label for="username-or-email">Username or email address</label>
+                <input type="text" class="input-field" id="username-or-email" required>
+            </div>
+
+            <!-- Password + Forgot password -->
+            <div class="input-container">
+                <div class="label-password">
+                    <label for="password">Password</label>
+                    <a href="#" class="forgot-password-link">Forgot Password?</a>
+                </div>
+                <input type="password" class="input-field" id="password" required>
+            </div>
+
+            <!-- Remember me -->
+            <div class="section">
+                <input type="checkbox" id="remember-me">
+                <label for="remember-me">Remember Me</label>
+            </div>
+
+            <!-- Submit button -->
+            <div class="input-container">
+                <button type="submit" class="submit-button">Sign In</button>
+            </div>
+
+            <!-- Middle text -->
+            <div class="middle-text">
+                <hr><span>or</span><hr>
+            </div>
+
+            <!-- Google login -->
+            <div class="gmail-login">
+                <button class="social-button google">Continue with Google</button>
+            </div>
+
+            <!-- Sign up -->
+            <div class="sign-up">
+                <p>Don't have an account? 
+                    <a href="#" class="sign-up-link">Create an account</a>
+                </p>  
+            </div>
+        </form>
+    </main>
+</body>
+</html>

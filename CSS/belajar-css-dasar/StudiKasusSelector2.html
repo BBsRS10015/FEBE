@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+/* 1. DESCENDANT: Semua <em> di dalam .bio-mahasiswa
+   Pilih semua <em> yang ada di dalam .bio-mahasiswa, tidak peduli sedalam apa di dalamnya.
+   Hasil: Semua teks miring di bio mahasiswa jadi hijau, termasuk yang ada di nested <div>.
+*/
+.bio-mahasiswa em {
+  color: green;
+  border: 1px dashed green;
+}
+
+/* 2. CHILD: <li> langsung di dalam .jadwal-kuliah
+   Pilih semua <li> yang langsung ada di dalam .jadwal-kuliah.
+   Hasil: Hanya mata kuliah utama yang langsung jadi anak <ul> di .jadwal-kuliah yang
+   mendapat background kuning, sedangkan jadwal di sub-list tidak kena.
+*/
+.jadwal-kuliah > li {
+  background-color: lightyellow;
+}
+
+/* 3. ADJACENT SIBLING: <p> tepat setelah <h2>
+   Pilih <p> yang langsung berada setelah <h2>.
+   Hasil: Paragraf pertama setelah judul "Prestasi" jadi teks besar merah.
+*/
+h2 + p {
+  color: red;
+  font-size: 1.2em;
+}
+
+/* 4. GENERAL SIBLING: Semua <p> setelah <h3>
+   Pilih semua <p> yang posisinya setelah <h3>.
+   Hasil: Semua catatan setelah "Pengumuman" jadi miring abu-abu.
+*/
+h3 ~ p {
+  font-style: italic;
+  color: gray;
+}
+</style>
+</head>
+<body>
+
+<h1>Profil Mahasiswa</h1>
+
+<div class="bio-mahasiswa">
+  <p>Nama: <em>Andi Saputra</em></p>
+  <div>
+    <p>Jurusan: <em>Teknik Informatika</em></p>
+  </div>
+</div>
+
+<h1>Jadwal Kuliah</h1>
+
+<ul class="jadwal-kuliah">
+  <li>Senin: Algoritma</li>
+  <li>Selasa: Basis Data
+    <ul>
+      <li>Lab SQL</li>
+    </ul>
+  </li>
+</ul>
+
+<h2>Prestasi</h2>
+<p>Juara 1 Lomba Coding</p>
+<p>Finalis Hackathon Nasional</p>
+
+<h3>Pengumuman</h3>
+<p>Bimbingan skripsi minggu depan</p>
+<p>Submit revisi proposal paling lambat Jumat</p>
+
+</body>
+</html>

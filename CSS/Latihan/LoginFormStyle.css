@@ -1,0 +1,156 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #6B73FF, #000DFF);
+}
+
+.login-container {
+    background: rgba(255, 255, 255, 0.95);
+    padding: 2rem;
+    border-radius: 12px;
+    max-width: 400px;
+    width: 90%;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+}
+
+.login-header header {
+    font-size: 1.5rem;
+    font-weight: 600;
+    text-align: center;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.input-container {
+    margin-bottom: 1rem;
+}
+
+.input-container label {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #333;
+    display: block;
+    margin-bottom: 0.4rem;
+}
+
+.input-field {
+    width: 100%;
+    padding: 0.7rem;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    transition: border-color 0.3s;
+}
+
+.input-field:focus {
+    border-color: #6B73FF;
+    outline: none;
+}
+
+.label-password {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.label-password a {
+    font-size: 0.85rem;
+    color: #6B73FF;
+    text-decoration: none;
+}
+
+.label-password a:hover {
+    text-decoration: underline;
+}
+
+.section {
+    display: flex;
+    align-items: center;
+    gap: 0.4rem;
+    margin-bottom: 1rem;
+    font-size: 0.85rem;
+}
+
+.submit-button {
+    width: 100%;
+    padding: 0.8rem;
+    border: none;
+    background: #6B73FF;
+    color: white;
+    font-size: 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background 0.3s;
+    display: inline-block;
+}
+
+.submit-button:hover {
+    background: #000DFF;
+}
+
+.middle-text {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #666;
+    font-size: 0.85rem;
+    margin: 1rem 0;
+}
+
+.middle-text hr {
+    flex: 1;
+    border: none;
+    height: 1px;
+    background: #ccc;
+}
+
+.gmail-login button {
+    width: 100%;
+    padding: 0.8rem;
+    border: 1px solid #ccc;
+    background: white;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 0.95rem;
+    transition: background 0.3s;
+}
+
+.gmail-login button:hover {
+    background: #f8f8f8;
+}
+
+.sign-up {
+    margin-top: 1rem;
+    text-align: center;
+    font-size: 0.85rem;
+}
+
+.sign-up a {
+    color: #6B73FF;
+    text-decoration: none;
+}
+
+.sign-up a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive */
+@media (max-width: 480px) {
+    .login-container {
+        padding: 1.5rem;
+    }
+    .login-header header {
+        font-size: 1.3rem;
+    }
+}

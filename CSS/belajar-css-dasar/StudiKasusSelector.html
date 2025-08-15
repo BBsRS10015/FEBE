@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+/* 1. DESCENDANT: Semua <span> di dalam menu spesial 
+Pilih semua <span> yang ada di dalam .menu-spesial, tidak peduli sedalam apa di dalamnya.
+Hasil: Semua teks menu spesial jadi merah, termasuk yang ada di nested <ul>.    
+*/
+.menu-spesial span {
+  color: red;
+}
+
+/* 2. CHILD: Hanya <li> langsung di dalam .menu-minuman
+    Pilih semua <li> yang ada langsung di dalam .menu-minuman.
+    Hasil: Hanya minuman utama yang dibungkus <li> langsung di dalam .menu-minuman
+    yang punya background biru, kopi di nested <ul> tidak kena. 
+*/
+.menu-minuman > li {
+  background-color: lightblue;
+}
+    
+
+/* 3. ADJACENT SIBLING: <p> tepat setelah <h3> 
+    Pilih <p> yang tepat berada setelah <h3>.
+    Hasil: "Beli 1 Gratis 1" jadi bold, tapi paragraf setelahnya tidak.    
+*/
+h3 + p {
+  font-weight: bold;
+}
+
+/* 4. GENERAL SIBLING: Semua <p> setelah <h4> 
+    Pilih semua <p> yang posisinya setelah <h4>.
+    Hasil: Semua catatan setelah <h4> jadi miring.
+*/
+h4 ~ p {
+  font-style: italic;
+}
+</style>
+</head>
+<body>
+
+<h2>Menu Restoran</h2>
+
+<ul class="menu-spesial">
+  <li><span>Mie Goreng</span></li>
+  <li><span>Nasi Goreng</span>
+    <ul>
+      <li><span>Extra Pedas</span></li>
+    </ul>
+  </li>
+</ul>
+
+<ul class="menu-minuman">
+  <li>Es Teh Manis</li>
+  <li>Jus Alpukat</li>
+  <ul>
+    <li>Kopi Hitam</li>
+  </ul>
+</ul>
+
+<h3>Promo Hari Ini</h3>
+<p>Beli 1 Gratis 1</p>
+<p>Berlaku untuk semua minuman</p>
+
+<h4>Catatan</h4>
+<p>Harga belum termasuk pajak</p>
+<p>Promo tidak berlaku saat weekend</p>
+
+</body>
+</html>
+
+<!-- .menu-spesial span { color: red; }
+
+
+
+.menu-minuman > li { background-color: lightblue; }
+
+Pilih semua <li> yang ada langsung di dalam .menu-minuman.
+Hasil: Hanya minuman utama yang dibungkus <li> langsung di dalam .menu-minuman yang punya background biru, kopi di nested <ul> tidak kena.
+
+h3 + p { font-weight: bold; }
+
+Pilih <p> yang tepat berada setelah <h3>.
+Hasil: "Beli 1 Gratis 1" jadi bold, tapi paragraf setelahnya tidak.
+
+h4 ~ p { font-style: italic; }
+
+Pilih semua <p> yang posisinya setelah <h4>.
+Hasil: Semua catatan setelah <h4> jadi miring -->
